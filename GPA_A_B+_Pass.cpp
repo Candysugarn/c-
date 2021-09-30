@@ -10,7 +10,6 @@ template <class T2>
 string Calgrade1(T2 total);
 template <class T3>
 string Calgrade2(T3 total);
-
 int main()
 {
     int men, HW, te, mid, fi,i;
