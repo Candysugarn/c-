@@ -18,19 +18,19 @@ int main()
     for (i>1 ; i <= 20; i++)
     {
     
-    cout << "Mentality score [0-5] : "; cin >> men;
-    cout << "Homework score [0-10] : "; cin >> HW;
-    cout << "TestLab score [0-15] : "; cin >> te;
-    cout << "Midterm score [0-35] : "; cin >> mid;
-    cout << "Finalterm score [0-35] : "; cin >> fi;
-    int total = score<int>(men, HW, te, mid, fi);
-    string A = Calgrade(total);
-    string g = Calgrade1(total);
-    string s = Calgrade2(total);
-    cout << "total score : " << total << endl;
-    cout << "1st form grade : " << A << endl;
-    cout << "2nd form grade : " << g << endl;
-    cout << "Judging Criteria : " << s << endl;
+        cout << "Mentality score [0-5] : "; cin >> men;
+        cout << "Homework score [0-10] : "; cin >> HW;
+        cout << "TestLab score [0-15] : "; cin >> te;
+        cout << "Midterm score [0-35] : "; cin >> mid;
+        cout << "Finalterm score [0-35] : "; cin >> fi;
+        int total = score<int>(men, HW, te, mid, fi);
+        string A = Calgrade(total);
+        string g = Calgrade1(total);
+        string s = Calgrade2(total);
+        cout << "total score : " << total << endl;
+        cout << "1st form grade : " << A << endl;
+        cout << "2nd form grade : " << g << endl;
+        cout << "Judging Criteria : " << s << endl;
     }
     return 0;
 }
