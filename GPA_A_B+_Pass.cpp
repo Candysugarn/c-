@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
+
 template <class T>
 T score(T men, T HW, T te, T mid, T fi);
 template <class T1>
@@ -16,7 +17,6 @@ int main()
     string GPA;
     for (i>1 ; i <= 20; i++)
     {
-    
     
     cout << "Mentality score [0-5] : "; cin >> men;
     cout << "Homework score [0-10] : "; cin >> HW;
