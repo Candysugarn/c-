@@ -1,4 +1,4 @@
-//homework square 6406021421171 Jirayut Bandit ITI SEC B
+
 #include <iostream>
 
 using namespace std;
