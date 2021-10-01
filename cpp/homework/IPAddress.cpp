@@ -8,6 +8,7 @@ int  addressClass;
 int main()
 {
     int address;
+    cout << address << endl;
 }
 
 int isValidAddress
