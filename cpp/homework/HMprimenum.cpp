@@ -12,6 +12,7 @@ int main()
     cout << checkprime(number);
     return 0;
 }
+
 float checkprime(int num)
 {
     int number;
