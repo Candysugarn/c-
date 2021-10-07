@@ -294,3 +294,7 @@ void deletenode(set *ptr, set *&head)
 		delete (start);
 	}
 }
+
+
+
+
