@@ -3,6 +3,7 @@
 using namespace std;
 void Sort(int temp[], const int max);
 void Swap(int &n1, int &n2);
+
 int main()
 {
     const int Max = 10;
@@ -19,6 +20,7 @@ int main()
     cout << "\n";
     return (0);
 }
+
 void Sort(int temp[], const int Max)
 {
     int i, j, n;
