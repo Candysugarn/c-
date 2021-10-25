@@ -13,87 +13,105 @@ void selectchair(int chair[5][10], int time, int cinema);
 
 int chaircount(int chair[5][10], int &n);
 
+void reportchair(int chair1_1[5][10],int chair1_2[5][10],int chair1_3[5][10],
+                 int chair2_1[5][10],int chair2_2[5][10],int chair2_3[5][10],
+                 int chair3_1[5][10],int chair3_2[5][10],int chair3_3[5][10],int &n);
 int main()
 {
     int cinema, time, menu, chaircol, n;
     int chairrow;
     char exit;
     string ok;
-    int chair1_1[5][10] = {0};
-    int chair1_2[5][10] = {0};
-    int chair1_3[5][10] = {0};
+    int chair1_1[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
 
-    int chair2_1[5][10] = {0};
-    int chair2_2[5][10] = {0};
-    int chair2_3[5][10] = {0};
+    int chair1_2[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
 
-    int chair3_1[5][10] = {0};
-    int chair3_2[5][10] = {0};
-    int chair3_3[5][10] = {0};
+    int chair1_3[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair2_1[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair2_2[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair2_3[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair3_1[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair3_2[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
+
+    int chair3_3[5][10] = {{0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0},
+                           {0,0,0,0,0,0,0,0,0,0}};
 
     do
     {
         do
         {
-
+            do{
+            exit = 0;
             menuselect(menu);
 
             if (menu == 1)
             {
+                system("cls");
                 cinemaselect(cinema);
             }
 
             if (menu == 2)
             {
-                ofstream fout("Report.txt");
-
-                cout << " Cinema 1 Time 10:00 ";
-                chaircount(chair1_1, n);
-                cout << endl;
-                fout << " Cinema 1 Time 10:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 1 Time 13:00 ";
-                chaircount(chair1_2, n);
-                cout << endl;
-                fout << " Cinema 1 Time 13:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 1 Time 16:00 ";
-                chaircount(chair1_3, n);
-                cout << endl;
-                fout << " Cinema 1 Time 16:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 2 Time 10:00 ";
-                chaircount(chair2_1, n);
-                cout << endl;
-                fout << " Cinema 2 Time 10:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 2 Time 13:00 ";
-                chaircount(chair2_2, n);
-                cout << endl;
-                fout << " Cinema 2 Time 13:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 2 Time 16:00 ";
-                chaircount(chair2_3, n);
-                cout << endl;
-                fout << " Cinema 2 Time 16:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 3 Time 10:00 ";
-                chaircount(chair3_1, n);
-                cout << endl;
-                fout << " Cinema 3 Time 10:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 3 Time 13:00 ";
-                chaircount(chair3_2, n);
-                cout << endl;
-                fout << " Cinema 3 Time 13:00 Chair Reserve = " << n << endl;
-
-                cout << " Cinema 3 Time 16:00 ";
-                chaircount(chair3_3, n);
-                cout << endl;
-                fout << " Cinema 3 Time 16:00 Chair Reserve = " << n << endl;
-                fout.close();
+                system("cls");
+                reportchair(chair1_1,chair1_2,chair1_3,
+                            chair2_1,chair2_2,chair2_3,
+                            chair3_1,chair3_2,chair3_3,n);
+                cout << " Exit Program ? y/n : ";
+                cin >> exit;
+            }
+            if (menu == 3)
+            {
+                cout << " Exit Program ? y/n : ";
+                cin >> exit;
+            }
+            
+            if (exit == 'y' || exit == 'Y')
+            {
                 return 0;
             }
+            
+            } while (exit == 'n');
+            
             /*-------------------------Select Cinema------------*/
             switch (cinema)
             {
@@ -192,9 +210,10 @@ void menuselect(int &menu)
 {
     menu = 0;
     cout << endl;
-    cout << "Select Cinema or Report" << endl;
+    cout << "Select Cinema or Report or Exit" << endl;
     cout << "1. Select Cinema" << endl;
     cout << "2. Select Report" << endl;
+    cout << "3. Select Exit" << endl;
     cout << "Enter Select : ";
     cin >> menu;
     cout << endl;
@@ -202,6 +221,7 @@ void menuselect(int &menu)
 
 void timeselect(int &time)
 {
+    system("cls");
     time = 0;
     cout << "----------------------------------------------------------------------------" << endl;
     cout << endl;
@@ -248,6 +268,7 @@ void cinemadisplay(int cinema)
 
 void cinemaselect(int &cinema)
 {
+    system("cls");
     cout << "----------------------------------------------------------------------------" << endl;
     cout << endl;
     cout << "Plese Enter Number Select Cinema" << endl;
@@ -437,6 +458,7 @@ void selectchair(int chair[5][10], int time, int cinema)
                     }
                     cout << endl;
                 }
+                
                 timedisplay(time);
                 cout << setw(30) << " You Select Chair = " << rowrow << cols << endl;
                 cout << setw(30) << "Are you sure Y/N : ";
@@ -452,8 +474,6 @@ void selectchair(int chair[5][10], int time, int cinema)
                 round2++;
                 backuprow[i] = row;
                 backupcol[i] = col;
-                cout << backuprow[i] << endl;
-                cout << backupcol[i] << endl;
                 i++;
             } while (ok == 'y' || ok == 'Y');
         }
@@ -501,13 +521,60 @@ int chaircount(int chair[5][10], int &n)
             {
                 n++;
             }
-            else
-            {
-                char(o + r);
-                c = c + 1;
-            }
         }
     }
     cout << " Chair Reserve = " << n << endl;
     return n;
+}
+
+void reportchair(int chair1_1[5][10],int chair1_2[5][10],int chair1_3[5][10],
+                 int chair2_1[5][10],int chair2_2[5][10],int chair2_3[5][10],
+                 int chair3_1[5][10],int chair3_2[5][10],int chair3_3[5][10],int &n){
+    ofstream fout("Report.txt");
+
+                cout << " Cinema 1 Time 10:00 ";
+                chaircount(chair1_1, n);
+                cout << endl;
+                fout << " Cinema 1 Time 10:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 1 Time 13:00 ";
+                chaircount(chair1_2, n);
+                cout << endl;
+                fout << " Cinema 1 Time 13:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 1 Time 16:00 ";
+                chaircount(chair1_3, n);
+                cout << endl;
+                fout << " Cinema 1 Time 16:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 2 Time 10:00 ";
+                chaircount(chair2_1, n);
+                cout << endl;
+                fout << " Cinema 2 Time 10:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 2 Time 13:00 ";
+                chaircount(chair2_2, n);
+                cout << endl;
+                fout << " Cinema 2 Time 13:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 2 Time 16:00 ";
+                chaircount(chair2_3, n);
+                cout << endl;
+                fout << " Cinema 2 Time 16:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 3 Time 10:00 ";
+                chaircount(chair3_1, n);
+                cout << endl;
+                fout << " Cinema 3 Time 10:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 3 Time 13:00 ";
+                chaircount(chair3_2, n);
+                cout << endl;
+                fout << " Cinema 3 Time 13:00 Chair Reserve = " << n << endl;
+
+                cout << " Cinema 3 Time 16:00 ";
+                chaircount(chair3_3, n);
+                cout << endl;
+                fout << " Cinema 3 Time 16:00 Chair Reserve = " << n << endl;
+                fout.close();
 }
